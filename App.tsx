@@ -1,21 +1,19 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { View } from 'react-native';
+import { NativeBaseProvider } from 'native-base';
+import { Initial } from './src/screens/Initial';
 
 const MainStack = createStackNavigator();
 
-function Initial() {
-  return (
-  <View/>
-  );
-}
 
 export default function App() {
   return (
   <NavigationContainer>
+    <NativeBaseProvider>
     <MainStack.Navigator>
       <MainStack.Screen component={Initial} name='Initial'/>
     </MainStack.Navigator>
+    </NativeBaseProvider>
   </NavigationContainer>
   );
 }
