@@ -11,8 +11,12 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    "runtimeVersion": {
+      "policy": "nativeVersion"
+    },
     "updates": {
-      "fallbackToCacheTimeout": 0
+      "fallbackToCacheTimeout": 0,
+      "url": "https://u.expo.dev/b4fba42c-baee-4a96-b98d-ab3603e7d311"
     },
     "assetBundlePatterns": [
       "**/*"
