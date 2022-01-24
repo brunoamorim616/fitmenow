@@ -34,14 +34,6 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    },
-    "build": {
-      "development": {
-        "channel": "development"
-      },
-      "production": {
-        "channel": "production"
-      }
     }
   }
 }

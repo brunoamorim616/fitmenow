@@ -57,7 +57,7 @@ export function InputText({placeHolderText}: InputTextProps) {
       <Input
       onChangeText={(text) => setInputValue(text)}
       value={inputValue}
-      hitSlop={{top: 10, bottom: 10}}
+      hitSlop={{top: 10, bottom: 10, left: 150, right: 150}}
       onFocus={Animate}
       onBlur={AnimateBack}
         mx="3"
