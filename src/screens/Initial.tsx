@@ -1,23 +1,23 @@
 import { Input, View } from 'native-base';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Animated } from 'react-native';
 
 export function Initial() {
   const scalePlacheHolderY = useRef(new Animated.Value(0)).current
   const fadeAnim = useRef(new Animated.Value(1)).current
 
-  const [inputValue, setInputValue] = useState<string>('');
+  const [inputValue, setInputValue] = useState<string>('assadas');
 
   function Animate () {
     Animated.timing(scalePlacheHolderY, {
-      toValue: 1, duration: 500,  useNativeDriver: true
+      toValue: 1, duration: 200,  useNativeDriver: true
     }).start()
 
     Animated.timing(
       fadeAnim,
       {
         toValue: 1,
-        duration: 500,
+        duration: 200,
         useNativeDriver: true,
       }
     ).start();
@@ -27,19 +27,26 @@ export function Initial() {
   function AnimateBack () {
     if (!inputValue || inputValue===''){
       Animated.timing(scalePlacheHolderY, {
-        toValue: 0, duration: 500,  useNativeDriver: true
+        toValue: 0, duration: 200,  useNativeDriver: true
       }).start()
   
       Animated.timing(
         fadeAnim,
         {
           toValue: 0.5,
-          duration: 500,
+          duration: 200,
           useNativeDriver: true,
         }
       ).start();
     }
   }
+
+  useEffect(()=>{
+    if (inputValue){
+      scalePlacheHolderY.setValue(1)
+      fadeAnim.setValue(1)
+    }
+  },[])
 
 
   return (
