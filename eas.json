@@ -6,13 +6,24 @@
         "development": {
             "channel": "development",
             "developmentClient": true,
-            "distribution": "internal"
+            "distribution": "internal",
+            "env": {
+                "API_URL": "https://api.jokes.one"
+            }
         },
         "preview": {
             "channel": "preview",
-            "distribution": "internal"
+            "distribution": "internal",
+            "env": {
+                "API_URL": "https://api.production.com"
+            }
         },
-        "production": {}
+        "production": {
+            "channel": "production",
+            "env": {
+                "API_URL": "https://api.production.com"
+            }
+        }
     },
     "submit": {
         "production": {}

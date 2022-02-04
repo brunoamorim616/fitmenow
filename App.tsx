@@ -10,7 +10,7 @@ export default function App() {
         <NavigationContainer>
             <NativeBaseProvider>
                 <MainStack.Navigator>
-                    <MainStack.Screen component={Initial} name="Initial" />
+                    <MainStack.Screen component={Initial} name='Initial' />
                 </MainStack.Navigator>
             </NativeBaseProvider>
         </NavigationContainer>
