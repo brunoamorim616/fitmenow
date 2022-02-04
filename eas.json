@@ -1,18 +1,20 @@
 {
-  "cli": {
-    "version": ">= 0.45.1"
-  },
-  "build": {
-    "development": {
-      "developmentClient": true,
-      "distribution": "internal"
+    "cli": {
+        "version": ">= 0.45.1"
     },
-    "preview": {
-      "distribution": "internal"
+    "build": {
+        "development": {
+            "channel": "development",
+            "developmentClient": true,
+            "distribution": "internal"
+        },
+        "preview": {
+            "channel": "preview",
+            "distribution": "internal"
+        },
+        "production": {}
     },
-    "production": {}
-  },
-  "submit": {
-    "production": {}
-  }
+    "submit": {
+        "production": {}
+    }
 }
